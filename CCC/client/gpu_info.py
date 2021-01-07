@@ -28,15 +28,21 @@ class gpu_info:
         format = out.replace('b\'name\\r\\n','').replace("\\r\\n\'",'')
         return format
         
-gpu = gpu_info()
 
-stats = {
-    'power_draw' : gpu.get_gpu_power_draw(),
-    'utilization' : gpu.get_gpu_utilization(),
-    'temperature' : gpu.get_gpu_temperature(),
-    'name' : gpu.get_gpu_name()
-}
 
-print(str(stats))
+def info():
+    gpu = gpu_info()
+
+    stats = {
+        'power_draw' : gpu.get_gpu_power_draw(),
+        'utilization' : gpu.get_gpu_utilization(),
+        'temperature' : gpu.get_gpu_temperature(),
+        'name' : gpu.get_gpu_name()
+    }
+
+    return stats
+
+   
+
 
 
